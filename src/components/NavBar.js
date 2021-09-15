@@ -6,8 +6,6 @@ import {SideBarData} from "./SideBarData"
 import './NavBar.css'
 import { IconContext } from 'react-icons'
 
-
-
 function NavBar() {
   const [sidebar, setSidebar] =  useState(false)
   

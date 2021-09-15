@@ -13,15 +13,21 @@ export const SideBarData =[
     cName: 'nav-text'
   },
   {
-    title: 'Reports',
-    path: '/reports',
+    title: 'Produtos',
+    path: '/products',
     icon: <FcIcons.FcLock/>,
     cName: 'nav-text'
   },
   
   {
-    title: 'Team',
+    title: 'Time',
     path: '/team',
+    icon: <FcIcons.FcCollaboration/>,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Sobre',
+    path: '/about',
     icon: <FcIcons.FcBusinessman/>,
     cName: 'nav-text'
   },

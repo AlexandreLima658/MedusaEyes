@@ -1,11 +1,7 @@
 import React from 'react'
 
-function Products() {
-  return (
+export default () =>
     <div className='products'>
-      <h1>Products</h1>
+      <h3>Products</h3>
     </div>
-  )
-}
-
-export default Products
+  

@@ -4,24 +4,20 @@ import './App.css';
 import NavBar from "./components/NavBar";
 import Home from './pages/Home'
 import Products from './pages/Products'
-import Reports from './pages/Reports'
+import Team from'./pages/Team'
+import About from './pages/About'
 
-
-function App() {
-  return (
-    <>
+export default () => 
+  <>
     <Router>
       <NavBar />
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/products" component={Products}/>
-        <Route path="/reports" component={Reports}/>
+        <Route path='/team' component={Team}/>
+        <Route path='/about' component={About}/>
+
 
       </Switch>
     </Router>
-      
-    </>
-  );
-}
-
-export default App;
+  </>
