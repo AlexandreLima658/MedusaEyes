@@ -50,7 +50,7 @@
 }
 
 .nav-text a:hover{
-  background-image:linear-gradient(90deg, blue, white);
+  background-image:linear-gradient(50deg, transparent, rgb(175, 63, 175), rgb(105, 103, 236));
 }
 .nav-menu-items{
   width: 100%;
