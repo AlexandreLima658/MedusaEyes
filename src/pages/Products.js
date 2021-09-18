@@ -2,6 +2,6 @@ import React from 'react'
 
 export default () =>
     <div className='products'>
-      <h3>Products</h3>
+      <h3>Produtos</h3>
     </div>
   

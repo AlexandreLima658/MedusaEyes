@@ -13,13 +13,6 @@ export const SideBarData =[
     cName: 'nav-text'
   },
   {
-    title: 'Produtos',
-    path: '/products',
-    icon: <FcIcons.FcLock/>,
-    cName: 'nav-text'
-  },
-  
-  {
     title: 'Time',
     path: '/team',
     icon: <FcIcons.FcCollaboration/>,
@@ -28,7 +21,13 @@ export const SideBarData =[
   {
     title: 'Sobre',
     path: '/about',
-    icon: <FcIcons.FcBusinessman/>,
+    icon: <FcIcons.FcAbout/>,
+    cName: 'nav-text'
+  },
+  {
+    title: 'Upload',
+    path: '/arquivos',
+    icon: <FcIcons.FcUpload/>,
     cName: 'nav-text'
   },
   

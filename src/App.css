@@ -8,12 +8,17 @@
 
 }
 .home,
-.team,
 .about,
-.products {
+.products{
   display: flex;
-  height: 90vh;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-}
+  height: 40vh;
+  margin-left:16vw;
+  margin-top: 2rem;
+  font-size: max(40px,2vw);
+} 
+
+@media(max-width: 800px){
+.home{
+  width: 100px;
+  height: auto;
+}}

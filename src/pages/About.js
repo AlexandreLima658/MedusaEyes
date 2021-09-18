@@ -2,5 +2,5 @@ import React from "react"
 
 export default () =>
   <div className='about'>
-    <h3>About</h3>
+    <h3>Sobre</h3>
   </div>
