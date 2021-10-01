@@ -52,3 +52,15 @@ export const Preview  =  styled.div`
   margin-right: 10px;
 
 `;
+export const Submit = styled.button`
+   background-color: #2c5288;
+   cursor: pointer;
+   border: none;
+   color: white;
+   margin: 15px 0 25px;
+   border-radius: 4px;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   
+   padding: 12px;
+
+`

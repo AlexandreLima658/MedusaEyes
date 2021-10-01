@@ -1,27 +1,23 @@
-import React ,{Component}from "react";
-import { BrowserRouter as Router,Route,Switch } from "react-router-dom";
+import React from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import NavBar from './components/NavBar'
+import Analise from './pages/Analise'
+import About from './pages/About'
+import Step from './pages/Step'
+import Arquivos from "./pages/Arquivos"
 import './App.css'
-import NavBar from "./components/NavBar";
-import Home from './pages/Home'
-import Products from './pages/Products'
-import Arquivos from './pages/Arquivos'
-import About from'./pages/About'
-
-class App extends Component{ 
-  render(){
-    return( 
-      <>
+export default function App() {
+  return (
+    <>
       <Router>
-       <NavBar />
+        <NavBar />
           <Switch>
-            <Route path="/" exact component={Home}/>
-            <Route path="/products" component={Products}/>
-            <Route path='/arquivos' component={Arquivos}/>
-            <Route path='/about' component={About}/>
-          </Switch>
+            <Route path='/about' component={About} />
+            <Route path='/' exact component={Analise} />
+            <Route path='/step' component={Step} />
+            <Route path='/arquivos' component={Arquivos} />
+         </Switch>
       </Router>
-    
-  </>
-)}
+    </>
+  )
 }
-export default App

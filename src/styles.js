@@ -10,10 +10,11 @@ export const Container = styled.div`
 export const Content = styled.div`
   width: 100%;
   max-width: 400px;
-  margin: 30px;
-  margin-top: 10%;
-  background: #fff;
+  height: 60px;
+  max-height: 100vh;
+  margin-top: -80px ;
+  background: whitesmoke;
   border-radius: 4px;
-  padding: 24px;
+  padding: 6px;
   
 `

@@ -12,7 +12,6 @@ export default createGlobalStyle`
     body{
       font-family: Arial, Helvetica, sans-serif;
       font-size: 14px;
-      background: #7189c1;
       text-rendering: optimizeLegibility;
      
     }

@@ -1,9 +1,5 @@
 import React from "react"
-import * as FaIcons from "react-icons/fa"
 import * as FcIcons from "react-icons/fc"
-
-import * as AiIcons from "react-icons/ai"
-import * as IoIcons from "react-icons/io"
 
 export const SideBarData =[
   {
@@ -12,12 +8,7 @@ export const SideBarData =[
     icon: <FcIcons.FcBiotech/>,
     cName: 'nav-text'
   },
-  {
-    title: 'Time',
-    path: '/team',
-    icon: <FcIcons.FcCollaboration/>,
-    cName: 'nav-text'
-  },
+  
   {
     title: 'Sobre',
     path: '/about',
@@ -26,10 +17,15 @@ export const SideBarData =[
   },
   {
     title: 'Upload',
-    path: '/arquivos',
+    path: '/step',
     icon: <FcIcons.FcUpload/>,
     cName: 'nav-text'
   },
+  
+  
+  
+  
+  
   
 ]
 

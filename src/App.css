@@ -7,18 +7,35 @@
   font-family: 'Lato', sans-serif;
 
 }
-.home,
-.about,
-.products{
+
+
+.analise h3{
   display: flex;
   height: 40vh;
   margin-left:16vw;
-  margin-top: 2rem;
+  margin-top: 7rem;
   font-size: max(40px,2vw);
 } 
 
-@media(max-width: 800px){
-.home{
-  width: 100px;
-  height: auto;
-}}
+.about h3{
+  display: flex;
+  height: 40vh;
+  margin-left:16vw;
+  margin-top: 7rem;
+  font-size: max(40px,2vw);
+} 
+.arquivos h3{
+  display: flex;
+  height: 40vh;
+  margin-left:17vw;
+  margin-top: 7rem;
+  font-size: max(40px,1vw);
+}
+.step h3{
+  display: flex;
+  height: 40vh;
+  margin-left:17vw;
+  margin-top: 7rem;
+  font-size: max(40px,1vw);
+}
+
