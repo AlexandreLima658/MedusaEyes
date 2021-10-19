@@ -1,6 +1,8 @@
 import React from "react"
 import * as FcIcons from "react-icons/fc"
 
+
+
 export const SideBarData =[
   {
     title: 'Análise',
@@ -21,6 +23,15 @@ export const SideBarData =[
     icon: <FcIcons.FcUpload/>,
     cName: 'nav-text'
   },
+  {
+    title: 'Test',
+    path: '/teste',
+    icon: <FcIcons.FcTemplate/>,
+    cName: 'nav-text'
+  }
+  
+  
+  
   
   
   

@@ -1,4 +1,4 @@
-import React, {useState,useEffect, Component } from "react"
+import React, {Component } from "react"
 import GlobalStyle from "../styles/global"
 import { Container, Content } from "../styles"
 import { uniqueId } from "lodash"
@@ -65,7 +65,7 @@ processUpload = uploadedFile => {
   
   /* envia para url posts */
   api
-  .post("posts", data, {
+  .post("/gerenciador-img/upload", data, {
       onUploadProgress: e => {
         const progress = parseInt(Math.round((e.loaded * 100) / e.total));
 

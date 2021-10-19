@@ -1,35 +1,26 @@
 import React from 'react'
-import {StyledTable} from '../styles/styleStep'
-import * as FaIcons from 'react-icons/fa'
+//import {StyledTable} from '../styles/styleStep'
+//import * as FaIcons from 'react-icons/fa'
 
 
 export default function Analise() {
   return (
     <div className="analise">
       <h3>Análises</h3>
-      <StyledTable>
-      <table>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Status</th>
-            <th>Ação</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>12</th>
-            <th>Solicitado</th>
-            <th><FaIcons.FaPlus/></th>
-          </tr>
-          <tr>
-            <th>14</th>
-            <th>Solicitando</th>
-            <th><FaIcons.FaPlus/></th>
-          </tr>
-        </tbody>
-      </table>
-      </StyledTable>
+        
+      <section>
+        <form action="" >
+          <div className="input-container">
+            <label >Id</label>
+            <input className="inp1" type="number"  required/>
+            <label>Status</label>
+            <input  className ="inp2" type="text" required/>
+          </div>
+            
+            
+        </form>
+      </section>
+
     </div>
   )
 }

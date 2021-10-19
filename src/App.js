@@ -5,6 +5,10 @@ import Analise from './pages/Analise'
 import About from './pages/About'
 import Step from './pages/Step'
 import Arquivos from "./pages/Arquivos"
+import Teste from './pages/teste'
+
+
+
 import './App.css'
 export default function App() {
   return (
@@ -16,6 +20,10 @@ export default function App() {
             <Route path='/' exact component={Analise} />
             <Route path='/step' component={Step} />
             <Route path='/arquivos' component={Arquivos} />
+            <Route path='/teste' component={Teste} />
+            
+           
+
          </Switch>
       </Router>
     </>
