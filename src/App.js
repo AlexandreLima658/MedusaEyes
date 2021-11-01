@@ -3,9 +3,9 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Analise from './pages/Analise'
 import About from './pages/About'
-import Step from './pages/Step'
 import Arquivos from "./pages/Arquivos"
 import Teste from './pages/teste'
+import Multiple from './pages/multiple'
 
 
 
@@ -18,12 +18,13 @@ export default function App() {
           <Switch>
             <Route path='/about' component={About} />
             <Route path='/' exact component={Analise} />
-            <Route path='/step' component={Step} />
             <Route path='/arquivos' component={Arquivos} />
             <Route path='/teste' component={Teste} />
-            
+            <Route path='/multiple' component={Multiple} />
            
-
+            
+            
+            
          </Switch>
       </Router>
     </>

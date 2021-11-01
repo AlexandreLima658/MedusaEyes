@@ -19,7 +19,7 @@ export const SideBarData =[
   },
   {
     title: 'Upload',
-    path: '/step',
+    path: '/arquivos',
     icon: <FcIcons.FcUpload/>,
     cName: 'nav-text'
   },
@@ -28,15 +28,13 @@ export const SideBarData =[
     path: '/teste',
     icon: <FcIcons.FcTemplate/>,
     cName: 'nav-text'
+  },
+  {
+    title: 'Multiple',
+    path: '/multiple',
+    icon: <FcIcons.FcCalendar/>,
+    cName: 'nav-text'
   }
-  
-  
-  
-  
-  
-  
-  
-  
   
 ]
 

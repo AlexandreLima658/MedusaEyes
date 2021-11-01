@@ -1,7 +1,14 @@
 import axios from 'axios'
 
-const api  = axios.create({
-  baseURL: "http://localhost:3002"
-})
+const apiBase = 'http://localhost:3003'
 
-export default api
+
+const multFilesUpload = async (data) => {
+  try {
+    await axios.post(apiBase + '/gerenciador-registro/upload',data)
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export default multFilesUpload

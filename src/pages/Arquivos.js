@@ -14,7 +14,7 @@ state = {
   uploadedFiles: []
 };
 async componentDidMount() {
-  const response = await api.get("posts");
+  const response = await api.get("/posts");
 
   this.setState({
     uploadedFiles: response.data.map(file => ({
@@ -65,7 +65,7 @@ processUpload = uploadedFile => {
   
   /* envia para url posts */
   api
-  .post("/gerenciador-img/upload", data, {
+  .post('/gerenciador-registro/upload', data, {
       onUploadProgress: e => {
         const progress = parseInt(Math.round((e.loaded * 100) / e.total));
 
@@ -89,7 +89,7 @@ processUpload = uploadedFile => {
 };
 
 handleDelete = async id => {
-  await api.delete(`posts/${id}`);
+  await api.delete(`posts${id}`);
 
   this.setState({
     uploadedFiles: this.state.uploadedFiles.filter(file => file.id !== id)
