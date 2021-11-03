@@ -89,16 +89,16 @@ processUpload = uploadedFile => {
 };
 
 handleDelete = async id => {
-  await api.delete(`posts${id}`);
+  await api.get(`/gerenciador-registro/upload`);
 
   this.setState({
     uploadedFiles: this.state.uploadedFiles.filter(file => file.id !== id)
   });
 };
 
-//componentWillUnmount() {
- // this.state.uploadedFiles.forEach(file => URL.revokveObjectURL(file.preview));
-//}
+componentWillUnmount() {
+  this.state.uploadedFiles.forEach(file => URL.revokeObjectURL(file.preview));
+}
 
   render(){
   const {uploadedFiles} = this.state;

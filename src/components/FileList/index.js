@@ -48,7 +48,7 @@ const FileList = ({files, onDelete}) => (
     </li>
 
     ))}
-    <Submit>Concluir</Submit>
+    
   </Container>
 )
 

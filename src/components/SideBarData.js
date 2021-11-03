@@ -34,6 +34,12 @@ export const SideBarData =[
     path: '/multiple',
     icon: <FcIcons.FcCalendar/>,
     cName: 'nav-text'
+  },
+  {
+    title: 'File',
+    path: '/file',
+    icon: <FcIcons.FcFile/>,
+    cName: 'nav-text'
   }
   
 ]
