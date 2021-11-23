@@ -7,7 +7,7 @@ import Arquivos from "./pages/Arquivos"
 import Teste from './pages/teste'
 import Multiple from './pages/multiple'
 import File from './pages/File'
-
+import FileZona from './pages/FileZona'
 
 import './App.css'
 export default function App() {
@@ -22,6 +22,7 @@ export default function App() {
             <Route path='/teste' component={Teste} />
             <Route path='/multiple' component={Multiple} />
             <Route path='/file' component={File} />
+            <Route path='/filezona' component={FileZona} />
             
             
             

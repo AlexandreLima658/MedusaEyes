@@ -1,29 +1,46 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import { Layout, Container, BoxUpload, ImagePreview } from "../styles/styleFile";
 import img from '../assets/folder.png'
 import CloseIcon from '../assets/close.svg'
 import configApi from '../services/configApi'
+
 function File(){
 
   const [image, setImage] = useState('')
   const [isUpload, setIsUpload] = useState(false)
   const [multipleFiles, setMulpleFiles]= useState('')
   const [imageSelect, setSelectImage] = useState('')
+
+
+
+  const Remove = (e) =>{
+    setIsUpload(false)
+  }
+
   const imageChange = (e) => {
     setMulpleFiles(e.target.files)  
     if(e.target.files){
       const reader = new FileReader()
-
+      
       reader.onload = function(e){
-          setImage(e.target.result)
+          setImage(reader.result)
           setIsUpload(true)
       }
       
       reader.readAsDataURL(e.target.files[0])
+      
+      
   }
 }
-  
-  
+
+
+    
+
+
+
+
+/*
+  */
   
   const UploadMultipleFiles = async() =>{
     const formData = new FormData()
@@ -45,28 +62,29 @@ function File(){
               {
                 !isUpload ? (
                    <>
-                   <label htmlFor="upload-input">
-                <img src={img} draggable={'false'} alt="placeholder" style={{width: 60, height: 60}} />
-                <p style={{color: '#444'}}>
-                  Click para fazer o upload
-                </p>
-              </label>
-              <input 
-              type="file" 
-              id="upload-input" 
-              accept="image/*"
-              multiple
-              onChange={imageChange}
-              />
-              
-                </> 
-                
+                 <label htmlFor="upload-input">
+                    <img src={img} draggable={'false'} alt="placeholder" style={{width: 60, height: 60}} />
+                    <p style={{color: '#444'}}>
+                      Click para fazer o upload
+                    </p>
+                  </label>
+                  <input 
+                  type="file" 
+                  id="upload-input" 
+                  accept="image/*"
+                  multiple
+                  onChange={imageChange}
                   
+                  />
+                
+                </> 
+                   
+                   
                 ) : (
                   
                  <ImagePreview> 
                   
-                  <img  className="close-icon" src={CloseIcon} alt="CloseIcon" onClick={() =>{setIsUpload(false)} }/>
+                  <img  className="close-icon" src={CloseIcon} alt="CloseIcon" onClick={(e) =>{Remove(e)} }/>
                   <img id="uploaded-image" src={image} alt="uploaded-img" />
                   
                 </ImagePreview>

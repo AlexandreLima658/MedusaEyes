@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Layout = styled.div`
   width: 100%;
   height: 100%;
-
   display: grid;
   place-items: center;
  
@@ -13,7 +12,7 @@ export const Layout = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 24vh;
+  margin-top: 30vh;
   background-color: #fff;
   padding: 36px 48px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -29,6 +28,7 @@ export const Container = styled.div`
 export const BoxUpload = styled.div`
   display: grid;
   margin-top: 0px;
+  height: 120px;
   place-items: center;
   border: 1px dashed #799CD9;
   padding: 24px 10px 8px 0px;
@@ -54,11 +54,13 @@ export const BoxUpload = styled.div`
 
 export const ImagePreview = styled.div`
   position: relative;
+  
   //cursor: pointer;
 
   #uploaded-image{
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
+      margin-top: -15px;
       object-fit: cover;
       border-radius: 20px;
 
@@ -67,8 +69,8 @@ export const ImagePreview = styled.div`
   .close-icon{
     position: absolute;
     z-index: 5;
-    right: 10px;
-    top: 10px;
+    left: 70px;
+    top: -10px;
     width: 20px;
     height: 20px;
     background-color:#fff;

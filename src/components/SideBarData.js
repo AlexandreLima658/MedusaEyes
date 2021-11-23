@@ -17,18 +17,8 @@ export const SideBarData =[
     icon: <FcIcons.FcAbout/>,
     cName: 'nav-text'
   },
-  {
-    title: 'Upload',
-    path: '/arquivos',
-    icon: <FcIcons.FcUpload/>,
-    cName: 'nav-text'
-  },
-  {
-    title: 'Test',
-    path: '/teste',
-    icon: <FcIcons.FcTemplate/>,
-    cName: 'nav-text'
-  },
+ 
+
   {
     title: 'Multiple',
     path: '/multiple',
@@ -40,7 +30,14 @@ export const SideBarData =[
     path: '/file',
     icon: <FcIcons.FcFile/>,
     cName: 'nav-text'
+  },
+  {
+    title: 'FileZona',
+    path: '/filezona',
+    icon: <FcIcons.FcCallback/>,
+    cName: 'nav-text'
   }
+  
   
 ]
 

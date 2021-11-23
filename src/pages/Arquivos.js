@@ -89,7 +89,7 @@ processUpload = uploadedFile => {
 };
 
 handleDelete = async id => {
-  await api.get(`/gerenciador-registro/upload`);
+  await api.delete('/gerenciador-registro/upload')
 
   this.setState({
     uploadedFiles: this.state.uploadedFiles.filter(file => file.id !== id)
@@ -108,9 +108,7 @@ componentWillUnmount() {
     <Container>
       <Content>
       <Upload onUpload={this.handleUpload}/>
-        { !!uploadedFiles.length && (<FileList  files={uploadedFiles} onDelete={
-          this.handleDelete
-        }/>
+        { !!uploadedFiles.length && (<FileList  files={uploadedFiles} onDelete={this.handleDelete}/>
         )}
       </Content>
      <GlobalStyle />

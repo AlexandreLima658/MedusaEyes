@@ -53,66 +53,48 @@ input{
   transition: .2s ease-in-out;
   margin: 12px; 
   
-  
 }
-/*
-label {
-  color: #616161;
-  margin: 12px;
-  position: absolute;
-  font-size: 1rem;
-  cursor: text;
-  margin: 12px;
-}
-.inp1
-label {
-  height: 4rem;
-  font-size: 1rem;
-}
-.inp2
-label {
-  height: 4rem;
-  font-size: 1rem;
-}
-.inp1:valid,
-.inp1:focus {
-  border-bottom: 2px solid #26a69a;  
-}
-.inp2:valid,
-.inp2:focus {
-  border-bottom: 2px solid #26a69a;  
-}
-.inp1:valid + label,
-.inp1:focus + label {
-  color: #26a69a;
-  font-size: .8rem;
-  top: -30px;
-  pointer-events: none;
-}
-.inp2:valid + label,
-.inp2:focus + label {
-  color:#26a69a;
-  font-size: .8rem;
-  top: -30px;
-  pointer-events: none;
-}
-*/
 .container{
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  margin-top: 250px;
+  margin-top: 18vw;
+
 }
 .content{
   margin-top: 15vw;
   margin-left: 80vh;
 }
  img{
-  width: 80px;
-  height: 80px;
-  margin-left: 12px;
+    width: 50px;
+    height: 50px;
+    margin-left: 12px;
+    display: inline-block;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.dropzone{
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #e3e3e3;
+  border-radius: 8px;
+  width: 450px;
+  margin-left: 55vh;
+  padding: 14px;
+  cursor: pointer;
+  opacity: .8s;
+  color: #777
+}
+.files{
+  margin: 20px;
+  margin-left: 25vw;
+}
+.fileItems li,
+  i{
   display: inline-block;
-  margin-bottom: 18px;
-  border-radius: 4px;
-  object-fit: cover;
+  margin:  12px;
+  cursor: pointer;
+  
 }

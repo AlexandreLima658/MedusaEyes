@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import configApi from '../services/configApi'
 
+
 function FileUploadScreen(){
   const [multipleFile, setMultipleFiles] = useState('')  
   
+  
   const MultipleFileChange = (e) => {
     setMultipleFiles(e.target.files)
+      console.log('files: ',multipleFile)
   }
-  
   
   const UploadMultipleFiles = async () =>{
     
@@ -29,8 +31,10 @@ function FileUploadScreen(){
                 <label>Multiple files</label>
                 <input type="file"
                  name="image"
+                 id="image"
                  accept="image/*" 
                  onChange={(e) => MultipleFileChange(e)} 
+                 
                  className="form-control"
                  multiple
                 />

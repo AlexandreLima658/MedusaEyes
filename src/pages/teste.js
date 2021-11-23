@@ -1,80 +1,74 @@
-import React, { useState } from 'react'
+import React, {useState,useCallback } from 'react'
 import configApi from '../services/configApi'
-
-
-function Teste(){
+import {useDropzone} from 'react-dropzone'
+function MultipleUploadFiles(){
   
-  const [multipleFiles, setMultipleFiles] = useState('')
+  const [multipleFiles, setMultipleFiles] = useState([])
   const [selectImage, setSelectImage] = useState([])
+
   
-  const imageChange  = (e) =>{
-    console.log(e.target.files)
-    setMultipleFiles(e.target.files)
-    if(e.target.files){
-      const fileArray = Array.from(e.target.files).map((file) => URL.createObjectURL(file))
-      console.log(fileArray)
-      setSelectImage((prevImage) => prevImage.concat(fileArray))
-      Array.from(e.target.files).map(
-        (file) => URL.revokeObjectURL(file)
-      )
-      
-      
+   const imageChange  = (e) =>{
+    const file = e.target.files 
+    setMultipleFiles(file)
+    
     }
-   
+    
+    const [isSelect,setIsSelect] = useState('')
+    const onDrop = useCallback((acceptedFiles) => {
+    acceptedFiles.forEach((file) =>{
+      const son = document.createElement('img')
 
-  }
-  //Preview
-  const renderImage = (source) =>{
-      return source.map((photo)=>{
-        return <img  src={photo} key={photo}/>
+        const reader = new FileReader()
+
+        reader.onabort = () => console.log('file reading')
+        reader.onerror = () => console.log('file reading abort')
+
+        reader.onload = () =>{
+          const binary = reader.result
+          son.src = binary
+          console.log(son)
+          document.body.appendChild(son)
+          console.log(file.path)
+
+        }
+        reader.readAsDataURL(file)
       })
-
-  }
-  /*
-  const multipleFileChange = (e) =>{
-      setMultipleFiles(e.target.files)
-  }
-  */
-  const UploadMultipleFiles = async() =>{
+    },[false]
+  )
+  const {getRootProps, getInputProps} = useDropzone({onDrop})
+  
+  
+      
+  
+   const UploadMultipleFiles = async() =>{
     const formData = new FormData()
     console.log(multipleFiles)
     for(let i=0; i< multipleFiles.length; i++){
       formData.append('file', multipleFiles[i])
     }
     await configApi(formData)
+    //alert('Arquivo(s) enviado(s) com sucesso 😁')
+    
   }
-
- return( 
-      <div className="content">
-        <div className="row mt-3">
-          <div className="col-6">
-            <div className="form-group">
-                <label>Upload</label>
-                <input 
-                type="file"
-                id="file"
-                accept="image/*" 
-                onChange={(e) => {imageChange(e)}}
-                className="form-control"
-                multiple
-                
-                />
-              </div>
-              {renderImage(selectImage)}
-             
-                
-            <div className="row">
-              <div className="col-10">
-                  <button type="button" onClick={() => UploadMultipleFiles()} className="btn btn-primary">Enviar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
    
-        
-  )
-}
 
-export default Teste
+  return(
+    <div className="form-group">
+    <div {...getRootProps()}>
+      <input
+      onChange={imageChange}
+      {...getInputProps()} 
+      />
+      <p>Drag 'n' drop some files here, or click to select files</p>
+    </div>
+    
+
+    <div>
+      <button onClick={() => UploadMultipleFiles()}>Enviar</button>
+    </div>
+    </div>
+  )
+
+
+}
+export default MultipleUploadFiles
