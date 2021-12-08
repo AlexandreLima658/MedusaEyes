@@ -20,7 +20,7 @@ function NavBar() {
          
         </Link>
         <div className="textlogo">
-          <h3>Medusa Eyes</h3>
+          <h4>Medusa Eyes</h4>
         </div>
       </div>
      

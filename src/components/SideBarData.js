@@ -25,12 +25,7 @@ export const SideBarData =[
     icon: <FcIcons.FcCalendar/>,
     cName: 'nav-text'
   },
-  {
-    title: 'File',
-    path: '/file',
-    icon: <FcIcons.FcFile/>,
-    cName: 'nav-text'
-  },
+  
   {
     title: 'FileZona',
     path: '/filezona',

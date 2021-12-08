@@ -9,7 +9,7 @@
 }
 
 
-.analise h3{
+h3{
   display: flex;
   height: 40vh;
   margin-left:16vw;
@@ -31,13 +31,14 @@
   margin-top: 7rem;
   font-size: max(40px,1vw);
 }
-.step h3{
+.container h3{
   display: flex;
-  height: 40vh;
-  margin-left:17vw;
-  margin-top: 7rem;
+  height: 18vh;
+  margin-left:8vw;
+  margin-top: -10rem;
   font-size: max(40px,1vw);
 }
+
 
 
 .input-container{

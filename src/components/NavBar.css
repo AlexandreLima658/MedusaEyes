@@ -9,8 +9,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.textlogo{
-  font-size: 20px;
+.textlogo h4{
+  font-size: 25px;
   margin-right: 20px;
   color: white;
 }
