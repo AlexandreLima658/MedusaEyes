@@ -3,7 +3,7 @@ import { useDropzone } from 'react-dropzone'
 import configApi from '../services/configApi'
 import {FaRegTrashAlt} from 'react-icons/fa'
 import { useHistory } from 'react-router-dom'
-import Message from './About'
+
 
 
 
@@ -55,10 +55,7 @@ function Basic(props) {
       return aux;
     })
   }
-  const expandir = (file) =>{
-      console.log(file)
-
-  }
+ 
   
 
   const UploadMultipleFiles = async () => {
